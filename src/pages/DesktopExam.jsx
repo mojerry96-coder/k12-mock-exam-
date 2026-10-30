@@ -7,7 +7,7 @@ import { ExamHeader, Progress, Timer, Operators, SubmitButton, SaveStatus, Choic
 // Keyboard exam: the question and its fixed graph on the left; working (structured maths lines on
 // grid paper) and the explicit final answer on the right. Working is saved with the response but
 // only the final answer is marked.
-export function DesktopExam({ session, snap, draft, timeUp, save, busy, penText, keypadOpen, keypadRef, onOp, onKeypad, setTarget, onSubmit, onBack, onSettings, onSwitchMode }) {
+export function DesktopExam({ session, snap, draft, timeUp, save, busy, penText, canSwitch = true, keypadOpen, keypadRef, onOp, onKeypad, setTarget, onSubmit, onBack, onSettings, onSwitchMode }) {
   const q = snap.question;
   const isNumber = q.type === 'number';
   const lines = draft.lines.length ? draft.lines : [''];
@@ -102,7 +102,7 @@ export function DesktopExam({ session, snap, draft, timeUp, save, busy, penText,
         </div>
       </div>
 
-      <button className="side-tab" onClick={onSwitchMode}><Icon.pen /><span>Pen mode</span></button>
+      {canSwitch && <button className="side-tab" onClick={onSwitchMode}><Icon.pen /><span>Pen mode</span></button>}
       {timeUp && <p className="time-up" role="alert">Time’s up. Locking your last saved response…</p>}
     </main>
   );

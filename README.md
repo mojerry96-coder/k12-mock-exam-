@@ -50,6 +50,8 @@ preparation → one timed question at a time (keyboard or pen) → completion.
 - **Retake:** the completion screen offers Retake exam, which returns to preparation for a fresh attempt
   (the finished one stays on the server). The host can turn it off with `allowRetake: false` and hears
   `onRetake` / `mockexam:retake`.
+- **Multiple choice** (English, Biology, and any choice item in Mixed) always uses the normal question
+  and answer-card layout, even in pen mode: there is no writing paper or mode switch for it.
 - **Popups:** timing preview, number pad, submit
   confirmation (unanswered / last-question wording), leave exam, exam tools (full screen, switch input,
   finger drawing), review responses, and toasts. Escape, focus trap and focus return. A question that ends

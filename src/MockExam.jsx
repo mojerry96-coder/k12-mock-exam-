@@ -234,9 +234,10 @@ export function MockExam({ api, examId: initialExam, assets, host, storage }) {
           onSubject={exams.length > 1 && !canResume ? () => setPopup('subject') : null}
           onCheck={checkDevice} onStart={start} onTiming={() => setPopup('timing')} onClose={exitNow} />
       )}
-      {s.phase === 'exam' && snap?.question && (mode === 'tablet'
+      {/* Multiple choice needs no writing paper: it uses the normal layout in either mode. */}
+      {s.phase === 'exam' && snap?.question && (mode === 'tablet' && snap.question.type !== 'choice'
         ? <TabletExam key={snap.question.id} {...shared} penText={penText} recognize={recognize} engine={recognitionEngine} fingerDrawing={fingerDrawing} dark={dark} fullscreen={fullscreen} onFullscreen={toggleFullscreen} />
-        : <DesktopExam key={snap.question.id} {...shared} penText={penText} />)}
+        : <DesktopExam key={snap.question.id} {...shared} penText={penText} canSwitch={snap.question.type !== 'choice'} />)}
       {s.phase === 'complete' && snap && <Completion assets={assets} snap={snap} onReview={openReview} onRetake={host.allowRetake ? retake : null} onDone={exitNow} onClose={exitNow} />}
 
       <Genie open={popup === 'keypad'} anchor={keypadBtn}>
@@ -292,7 +293,7 @@ export function MockExam({ api, examId: initialExam, assets, host, storage }) {
         <p className="quiet">The timer keeps running while this is open.</p>
         <div className="tool-list">
           <button onClick={toggleFullscreen}>{fullscreen ? <Icon.shrink /> : <Icon.expand />} {fullscreen ? 'Exit full screen' : 'Full screen'}</button>
-          <button onClick={switchMode}>{mode === 'tablet' ? <><Icon.keyboard /> Switch to keyboard</> : <><Icon.pen /> Switch to pen</>}</button>
+          {snap?.question?.type !== 'choice' && <button onClick={switchMode}>{mode === 'tablet' ? <><Icon.keyboard /> Switch to keyboard</> : <><Icon.pen /> Switch to pen</>}</button>}
           {mode === 'tablet' && (
             <button aria-pressed={fingerDrawing} className={fingerDrawing ? 'on' : ''} onClick={() => { const v = !fingerDrawing; setFingerDrawing(v); local.set('mock-finger', v ? 'on' : 'off'); }}>
               <Icon.hand /> Draw with finger: {fingerDrawing ? 'on' : 'off'}

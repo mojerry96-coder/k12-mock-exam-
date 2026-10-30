@@ -88,10 +88,10 @@
 .fitila video, .fitila img { width: 100%; height: 100%; object-fit: contain; display: block; pointer-events: none; }
 .intro-fitila { width: calc(var(--u) * 560); height: calc(var(--u) * 560); flex: none; filter: drop-shadow(0 calc(var(--u) * 18) calc(var(--u) * 14) rgb(30 60 90 / 10%)); }
 .prep .intro-fitila { margin-left: calc(var(--u) * 30); }
-.intro-title { font: 400 calc(var(--u) * 92) / .96 var(--hand); text-align: center; margin-top: calc(var(--u) * -6); letter-spacing: -.005em; }
-.done .intro-title { font-size: calc(var(--u) * 88); margin-top: calc(var(--u) * 10); }
-.intro-sub { font-size: calc(var(--u) * 30); font-weight: 500; margin-top: calc(var(--u) * 14); text-align: center; }
-.done-sub { display: flex; align-items: center; gap: calc(var(--u) * 16); font-size: calc(var(--u) * 29); margin-top: calc(var(--u) * 26); }
+.mx .intro-title { font: 400 calc(var(--u) * 92) / 1.05 var(--hand); text-align: center; margin-top: calc(var(--u) * -6); letter-spacing: -.005em; }
+.mx .done .intro-title { font-size: calc(var(--u) * 88); margin-top: calc(var(--u) * 6); }
+.mx .intro-sub { font-size: calc(var(--u) * 30); font-weight: 500; margin-top: calc(var(--u) * 14); text-align: center; }
+.mx .done-sub { display: flex; align-items: center; gap: calc(var(--u) * 16); font-size: calc(var(--u) * 29); margin-top: calc(var(--u) * 18); }
 .ok-dot { width: calc(var(--u) * 42); height: calc(var(--u) * 42); border-radius: 50%; background: var(--green); color: #fff; display: grid; place-items: center; flex: none; }
 .ok-dot svg { width: 60%; height: 60%; }
 
@@ -533,8 +533,8 @@
   .intro-left { position: relative; left: auto; top: auto; width: 100%; height: auto; display: grid; grid-template-columns: calc(var(--u) * 340) 1fr; grid-template-rows: auto auto; align-items: center; column-gap: calc(var(--u) * 10); }
   .intro-fitila, .celebrate-stage { grid-row: 1 / span 2; width: calc(var(--u) * 340); height: calc(var(--u) * 340); }
   .prep .intro-fitila { margin: 0; }
-  .intro-title { font-size: calc(var(--u) * 84); align-self: end; }
-  .done .intro-title { font-size: calc(var(--u) * 72); }
+  .mx .intro-title { font-size: calc(var(--u) * 84); align-self: end; }
+  .mx .done .intro-title { font-size: calc(var(--u) * 72); }
   .intro-sub { align-self: start; justify-content: center; }
   .intro-card { position: relative; left: auto; top: auto; width: 100%; min-height: 0; }
   .done .intro-card { top: auto; min-height: 0; }
