@@ -1,0 +1,2220 @@
+{
+ "version": "original-demo-1",
+ "notice": "90 original placeholder questions. NOT authentic WAEC/JAMB past questions. No exam year claimed. Subject-expert review required.",
+ "questions": [
+  {
+   "id": "MAT-001",
+   "subject": "Mathematics",
+   "topic": "Gradient",
+   "prompt": "Find the gradient of the line through (1, 2) and (3, 6).",
+   "type": "number",
+   "options": [],
+   "answer": "2",
+   "explanation": "Gradient = (6 − 2)/(3 − 1) = 2.",
+   "seconds": 120,
+   "marks": 1,
+   "source": {
+    "kind": "original-placeholder",
+    "examBody": null,
+    "year": null,
+    "author": "AI-generated for this prototype",
+    "reviewStatus": "requires-subject-expert-review"
+   },
+   "graph": {
+    "points": [
+     [
+      1,
+      2
+     ],
+     [
+      3,
+      6
+     ]
+    ]
+   },
+   "passage": null,
+   "answerPrefix": "m"
+  },
+  {
+   "id": "MAT-002",
+   "subject": "Mathematics",
+   "topic": "Gradient",
+   "prompt": "Find the gradient through (−2, 5) and (3, −10).",
+   "type": "number",
+   "options": [],
+   "answer": "-3",
+   "explanation": "The rise is −15 and the run is 5, giving −3.",
+   "seconds": 120,
+   "marks": 1,
+   "source": {
+    "kind": "original-placeholder",
+    "examBody": null,
+    "year": null,
+    "author": "AI-generated for this prototype",
+    "reviewStatus": "requires-subject-expert-review"
+   },
+   "graph": {
+    "points": [
+     [
+      -2,
+      5
+     ],
+     [
+      3,
+      -10
+     ]
+    ]
+   },
+   "passage": null,
+   "answerPrefix": "m"
+  },
+  {
+   "id": "MAT-003",
+   "subject": "Mathematics",
+   "topic": "Linear equations",
+   "prompt": "Solve 5x − 7 = 18.",
+   "type": "number",
+   "options": [],
+   "answer": "5",
+   "explanation": "Add 7, then divide 25 by 5.",
+   "seconds": 120,
+   "marks": 1,
+   "source": {
+    "kind": "original-placeholder",
+    "examBody": null,
+    "year": null,
+    "author": "AI-generated for this prototype",
+    "reviewStatus": "requires-subject-expert-review"
+   },
+   "graph": null,
+   "passage": null
+  },
+  {
+   "id": "MAT-004",
+   "subject": "Mathematics",
+   "topic": "Percentages",
+   "prompt": "A bag costs ₦8,000 before a 15% discount. What is its discounted price in naira?",
+   "type": "number",
+   "options": [],
+   "answer": "6800",
+   "explanation": "15% of 8,000 is 1,200; subtract this from 8,000.",
+   "seconds": 120,
+   "marks": 1,
+   "source": {
+    "kind": "original-placeholder",
+    "examBody": null,
+    "year": null,
+    "author": "AI-generated for this prototype",
+    "reviewStatus": "requires-subject-expert-review"
+   },
+   "graph": null,
+   "passage": null
+  },
+  {
+   "id": "MAT-005",
+   "subject": "Mathematics",
+   "topic": "Ratio",
+   "prompt": "Share 84 in the ratio 2:5. What is the smaller share?",
+   "type": "number",
+   "options": [],
+   "answer": "24",
+   "explanation": "There are seven parts; 84 ÷ 7 × 2 = 24.",
+   "seconds": 120,
+   "marks": 1,
+   "source": {
+    "kind": "original-placeholder",
+    "examBody": null,
+    "year": null,
+    "author": "AI-generated for this prototype",
+    "reviewStatus": "requires-subject-expert-review"
+   },
+   "graph": null,
+   "passage": null
+  },
+  {
+   "id": "MAT-006",
+   "subject": "Mathematics",
+   "topic": "Indices",
+   "prompt": "Evaluate 2³ × 2⁴.",
+   "type": "number",
+   "options": [],
+   "answer": "128",
+   "explanation": "Add the powers: 2⁷ = 128.",
+   "seconds": 120,
+   "marks": 1,
+   "source": {
+    "kind": "original-placeholder",
+    "examBody": null,
+    "year": null,
+    "author": "AI-generated for this prototype",
+    "reviewStatus": "requires-subject-expert-review"
+   },
+   "graph": null,
+   "passage": null
+  },
+  {
+   "id": "MAT-007",
+   "subject": "Mathematics",
+   "topic": "Logarithms",
+   "prompt": "Evaluate log₁₀(1000).",
+   "type": "number",
+   "options": [],
+   "answer": "3",
+   "explanation": "10³ = 1000.",
+   "seconds": 120,
+   "marks": 1,
+   "source": {
+    "kind": "original-placeholder",
+    "examBody": null,
+    "year": null,
+    "author": "AI-generated for this prototype",
+    "reviewStatus": "requires-subject-expert-review"
+   },
+   "graph": null,
+   "passage": null
+  },
+  {
+   "id": "MAT-008",
+   "subject": "Mathematics",
+   "topic": "Fractions",
+   "prompt": "Evaluate 3/4 + 1/6. Give your answer as a fraction.",
+   "type": "number",
+   "options": [],
+   "answer": "11/12",
+   "explanation": "Use denominator 12: 9/12 + 2/12.",
+   "seconds": 120,
+   "marks": 1,
+   "source": {
+    "kind": "original-placeholder",
+    "examBody": null,
+    "year": null,
+    "author": "AI-generated for this prototype",
+    "reviewStatus": "requires-subject-expert-review"
+   },
+   "graph": null,
+   "passage": null
+  },
+  {
+   "id": "MAT-009",
+   "subject": "Mathematics",
+   "topic": "Probability",
+   "prompt": "A fair six-sided die is rolled. What is the probability of a result greater than 4?",
+   "type": "number",
+   "options": [],
+   "answer": "1/3",
+   "explanation": "Two outcomes, 5 and 6, out of six are favourable.",
+   "seconds": 120,
+   "marks": 1,
+   "source": {
+    "kind": "original-placeholder",
+    "examBody": null,
+    "year": null,
+    "author": "AI-generated for this prototype",
+    "reviewStatus": "requires-subject-expert-review"
+   },
+   "graph": null,
+   "passage": null
+  },
+  {
+   "id": "MAT-010",
+   "subject": "Mathematics",
+   "topic": "Mean",
+   "prompt": "Find the mean of 4, 6, 8 and 14.",
+   "type": "number",
+   "options": [],
+   "answer": "8",
+   "explanation": "The sum is 32; divide by four.",
+   "seconds": 120,
+   "marks": 1,
+   "source": {
+    "kind": "original-placeholder",
+    "examBody": null,
+    "year": null,
+    "author": "AI-generated for this prototype",
+    "reviewStatus": "requires-subject-expert-review"
+   },
+   "graph": null,
+   "passage": null
+  },
+  {
+   "id": "MAT-011",
+   "subject": "Mathematics",
+   "topic": "Median",
+   "prompt": "Find the median of 9, 2, 7, 4 and 6.",
+   "type": "number",
+   "options": [],
+   "answer": "6",
+   "explanation": "In order: 2, 4, 6, 7, 9; the middle value is 6.",
+   "seconds": 120,
+   "marks": 1,
+   "source": {
+    "kind": "original-placeholder",
+    "examBody": null,
+    "year": null,
+    "author": "AI-generated for this prototype",
+    "reviewStatus": "requires-subject-expert-review"
+   },
+   "graph": null,
+   "passage": null
+  },
+  {
+   "id": "MAT-012",
+   "subject": "Mathematics",
+   "topic": "Area",
+   "prompt": "A triangle has base 12 cm and perpendicular height 7 cm. Find its area in cm².",
+   "type": "number",
+   "options": [],
+   "answer": "42",
+   "explanation": "Area = 1/2 × 12 × 7.",
+   "seconds": 120,
+   "marks": 1,
+   "source": {
+    "kind": "original-placeholder",
+    "examBody": null,
+    "year": null,
+    "author": "AI-generated for this prototype",
+    "reviewStatus": "requires-subject-expert-review"
+   },
+   "graph": null,
+   "passage": null
+  },
+  {
+   "id": "MAT-013",
+   "subject": "Mathematics",
+   "topic": "Circles",
+   "prompt": "Using π = 22/7, find the circumference in cm of a circle with radius 7 cm.",
+   "type": "number",
+   "options": [],
+   "answer": "44",
+   "explanation": "Circumference = 2 × 22/7 × 7.",
+   "seconds": 120,
+   "marks": 1,
+   "source": {
+    "kind": "original-placeholder",
+    "examBody": null,
+    "year": null,
+    "author": "AI-generated for this prototype",
+    "reviewStatus": "requires-subject-expert-review"
+   },
+   "graph": null,
+   "passage": null
+  },
+  {
+   "id": "MAT-014",
+   "subject": "Mathematics",
+   "topic": "Pythagoras",
+   "prompt": "A right triangle has shorter sides 9 cm and 12 cm. Find its hypotenuse in cm.",
+   "type": "number",
+   "options": [],
+   "answer": "15",
+   "explanation": "The hypotenuse is √(81 + 144) = 15.",
+   "seconds": 120,
+   "marks": 1,
+   "source": {
+    "kind": "original-placeholder",
+    "examBody": null,
+    "year": null,
+    "author": "AI-generated for this prototype",
+    "reviewStatus": "requires-subject-expert-review"
+   },
+   "graph": null,
+   "passage": null
+  },
+  {
+   "id": "MAT-015",
+   "subject": "Mathematics",
+   "topic": "Simple interest",
+   "prompt": "Find the simple interest in naira on ₦20,000 at 5% per year for 3 years.",
+   "type": "number",
+   "options": [],
+   "answer": "3000",
+   "explanation": "Interest = 20,000 × 0.05 × 3.",
+   "seconds": 120,
+   "marks": 1,
+   "source": {
+    "kind": "original-placeholder",
+    "examBody": null,
+    "year": null,
+    "author": "AI-generated for this prototype",
+    "reviewStatus": "requires-subject-expert-review"
+   },
+   "graph": null,
+   "passage": null
+  },
+  {
+   "id": "MAT-016",
+   "subject": "Mathematics",
+   "topic": "Sequences",
+   "prompt": "Find the tenth term of 3, 7, 11, 15, …",
+   "type": "number",
+   "options": [],
+   "answer": "39",
+   "explanation": "The common difference is 4; 3 + 9 × 4 = 39.",
+   "seconds": 120,
+   "marks": 1,
+   "source": {
+    "kind": "original-placeholder",
+    "examBody": null,
+    "year": null,
+    "author": "AI-generated for this prototype",
+    "reviewStatus": "requires-subject-expert-review"
+   },
+   "graph": null,
+   "passage": null
+  },
+  {
+   "id": "MAT-017",
+   "subject": "Mathematics",
+   "topic": "Simultaneous equations",
+   "prompt": "If x + y = 11 and x − y = 3, find x.",
+   "type": "number",
+   "options": [],
+   "answer": "7",
+   "explanation": "Add the equations: 2x = 14.",
+   "seconds": 120,
+   "marks": 1,
+   "source": {
+    "kind": "original-placeholder",
+    "examBody": null,
+    "year": null,
+    "author": "AI-generated for this prototype",
+    "reviewStatus": "requires-subject-expert-review"
+   },
+   "graph": null,
+   "passage": null
+  },
+  {
+   "id": "MAT-018",
+   "subject": "Mathematics",
+   "topic": "Substitution",
+   "prompt": "If f(x) = 2x² − 3, find f(4).",
+   "type": "number",
+   "options": [],
+   "answer": "29",
+   "explanation": "2 × 16 − 3 = 29.",
+   "seconds": 120,
+   "marks": 1,
+   "source": {
+    "kind": "original-placeholder",
+    "examBody": null,
+    "year": null,
+    "author": "AI-generated for this prototype",
+    "reviewStatus": "requires-subject-expert-review"
+   },
+   "graph": null,
+   "passage": null
+  },
+  {
+   "id": "MAT-019",
+   "subject": "Mathematics",
+   "topic": "Quadratic equations",
+   "prompt": "Find the larger root of x² − 7x + 12 = 0.",
+   "type": "number",
+   "options": [],
+   "answer": "4",
+   "explanation": "Factor as (x − 3)(x − 4) = 0.",
+   "seconds": 120,
+   "marks": 1,
+   "source": {
+    "kind": "original-placeholder",
+    "examBody": null,
+    "year": null,
+    "author": "AI-generated for this prototype",
+    "reviewStatus": "requires-subject-expert-review"
+   },
+   "graph": null,
+   "passage": null
+  },
+  {
+   "id": "MAT-020",
+   "subject": "Mathematics",
+   "topic": "Variation",
+   "prompt": "y varies directly as x. When x = 4, y = 18. Find y when x = 10.",
+   "type": "number",
+   "options": [],
+   "answer": "45",
+   "explanation": "The ratio y/x is 4.5, so y = 45.",
+   "seconds": 120,
+   "marks": 1,
+   "source": {
+    "kind": "original-placeholder",
+    "examBody": null,
+    "year": null,
+    "author": "AI-generated for this prototype",
+    "reviewStatus": "requires-subject-expert-review"
+   },
+   "graph": null,
+   "passage": null
+  },
+  {
+   "id": "MAT-021",
+   "subject": "Mathematics",
+   "topic": "Speed",
+   "prompt": "A bus travels 150 km in 2.5 hours. Find its average speed in km/h.",
+   "type": "number",
+   "options": [],
+   "answer": "60",
+   "explanation": "Speed = 150 ÷ 2.5.",
+   "seconds": 120,
+   "marks": 1,
+   "source": {
+    "kind": "original-placeholder",
+    "examBody": null,
+    "year": null,
+    "author": "AI-generated for this prototype",
+    "reviewStatus": "requires-subject-expert-review"
+   },
+   "graph": null,
+   "passage": null
+  },
+  {
+   "id": "MAT-022",
+   "subject": "Mathematics",
+   "topic": "Sets",
+   "prompt": "In a group of 40 learners, 24 study French, 20 study music, and 10 study both. How many study neither?",
+   "type": "number",
+   "options": [],
+   "answer": "6",
+   "explanation": "The union has 24 + 20 − 10 = 34 learners; 40 − 34 = 6.",
+   "seconds": 120,
+   "marks": 1,
+   "source": {
+    "kind": "original-placeholder",
+    "examBody": null,
+    "year": null,
+    "author": "AI-generated for this prototype",
+    "reviewStatus": "requires-subject-expert-review"
+   },
+   "graph": null,
+   "passage": null
+  },
+  {
+   "id": "MAT-023",
+   "subject": "Mathematics",
+   "topic": "Angles",
+   "prompt": "Two angles in a triangle are 48° and 67°. Find the third angle in degrees.",
+   "type": "number",
+   "options": [],
+   "answer": "65",
+   "explanation": "180 − 48 − 67 = 65.",
+   "seconds": 120,
+   "marks": 1,
+   "source": {
+    "kind": "original-placeholder",
+    "examBody": null,
+    "year": null,
+    "author": "AI-generated for this prototype",
+    "reviewStatus": "requires-subject-expert-review"
+   },
+   "graph": null,
+   "passage": null
+  },
+  {
+   "id": "MAT-024",
+   "subject": "Mathematics",
+   "topic": "Trigonometry",
+   "prompt": "In a right triangle, the side opposite θ is 6 cm and the hypotenuse is 10 cm. Find sin θ.",
+   "type": "number",
+   "options": [],
+   "answer": "3/5",
+   "explanation": "sin θ = opposite/hypotenuse = 6/10 = 3/5.",
+   "seconds": 120,
+   "marks": 1,
+   "source": {
+    "kind": "original-placeholder",
+    "examBody": null,
+    "year": null,
+    "author": "AI-generated for this prototype",
+    "reviewStatus": "requires-subject-expert-review"
+   },
+   "graph": null,
+   "passage": null
+  },
+  {
+   "id": "MAT-025",
+   "subject": "Mathematics",
+   "topic": "Volume",
+   "prompt": "Find the volume in cm³ of a cuboid measuring 3 cm by 4 cm by 8 cm.",
+   "type": "number",
+   "options": [],
+   "answer": "96",
+   "explanation": "Volume = 3 × 4 × 8.",
+   "seconds": 120,
+   "marks": 1,
+   "source": {
+    "kind": "original-placeholder",
+    "examBody": null,
+    "year": null,
+    "author": "AI-generated for this prototype",
+    "reviewStatus": "requires-subject-expert-review"
+   },
+   "graph": null,
+   "passage": null
+  },
+  {
+   "id": "MAT-026",
+   "subject": "Mathematics",
+   "topic": "Standard form",
+   "prompt": "Express 0.00072 × 10⁵ as an ordinary number.",
+   "type": "number",
+   "options": [],
+   "answer": "72",
+   "explanation": "Multiplication by 100,000 gives 72.",
+   "seconds": 120,
+   "marks": 1,
+   "source": {
+    "kind": "original-placeholder",
+    "examBody": null,
+    "year": null,
+    "author": "AI-generated for this prototype",
+    "reviewStatus": "requires-subject-expert-review"
+   },
+   "graph": null,
+   "passage": null
+  },
+  {
+   "id": "MAT-027",
+   "subject": "Mathematics",
+   "topic": "Inequalities",
+   "prompt": "What is the greatest integer x satisfying 3x < 17?",
+   "type": "number",
+   "options": [],
+   "answer": "5",
+   "explanation": "x < 17/3, so the greatest integer is 5.",
+   "seconds": 120,
+   "marks": 1,
+   "source": {
+    "kind": "original-placeholder",
+    "examBody": null,
+    "year": null,
+    "author": "AI-generated for this prototype",
+    "reviewStatus": "requires-subject-expert-review"
+   },
+   "graph": null,
+   "passage": null
+  },
+  {
+   "id": "MAT-028",
+   "subject": "Mathematics",
+   "topic": "Coordinate geometry",
+   "prompt": "Find the x-coordinate of the midpoint of (−4, 7) and (6, 1).",
+   "type": "number",
+   "options": [],
+   "answer": "1",
+   "explanation": "Average the x-coordinates: (−4 + 6)/2 = 1.",
+   "seconds": 120,
+   "marks": 1,
+   "source": {
+    "kind": "original-placeholder",
+    "examBody": null,
+    "year": null,
+    "author": "AI-generated for this prototype",
+    "reviewStatus": "requires-subject-expert-review"
+   },
+   "graph": null,
+   "passage": null
+  },
+  {
+   "id": "MAT-029",
+   "subject": "Mathematics",
+   "topic": "Probability",
+   "prompt": "A bag contains 5 red and 3 blue counters. One counter is selected at random. Find the probability it is blue.",
+   "type": "number",
+   "options": [],
+   "answer": "3/8",
+   "explanation": "There are three blue counters among eight counters.",
+   "seconds": 120,
+   "marks": 1,
+   "source": {
+    "kind": "original-placeholder",
+    "examBody": null,
+    "year": null,
+    "author": "AI-generated for this prototype",
+    "reviewStatus": "requires-subject-expert-review"
+   },
+   "graph": null,
+   "passage": null
+  },
+  {
+   "id": "MAT-030",
+   "subject": "Mathematics",
+   "topic": "Compound growth",
+   "prompt": "A population of 200 increases by 10% in one year. Find the new population.",
+   "type": "number",
+   "options": [],
+   "answer": "220",
+   "explanation": "200 × 1.1 = 220.",
+   "seconds": 120,
+   "marks": 1,
+   "source": {
+    "kind": "original-placeholder",
+    "examBody": null,
+    "year": null,
+    "author": "AI-generated for this prototype",
+    "reviewStatus": "requires-subject-expert-review"
+   },
+   "graph": null,
+   "passage": null
+  },
+  {
+   "id": "ENG-001",
+   "subject": "English",
+   "topic": "Concord",
+   "prompt": "Choose the correct completion: Each of the pupils ___ a notebook.",
+   "type": "choice",
+   "options": [
+    "has",
+    "have",
+    "were having",
+    "are having"
+   ],
+   "answer": "has",
+   "explanation": "Each is singular and takes has.",
+   "seconds": 75,
+   "marks": 1,
+   "source": {
+    "kind": "original-placeholder",
+    "examBody": null,
+    "year": null,
+    "author": "AI-generated for this prototype",
+    "reviewStatus": "requires-subject-expert-review"
+   },
+   "graph": null,
+   "passage": null
+  },
+  {
+   "id": "ENG-002",
+   "subject": "English",
+   "topic": "Tense",
+   "prompt": "Choose the correct completion: By the time we arrived, the meeting ___.",
+   "type": "choice",
+   "options": [
+    "begins",
+    "has begin",
+    "was begin",
+    "had begun"
+   ],
+   "answer": "had begun",
+   "explanation": "The past perfect marks the earlier completed action.",
+   "seconds": 75,
+   "marks": 1,
+   "source": {
+    "kind": "original-placeholder",
+    "examBody": null,
+    "year": null,
+    "author": "AI-generated for this prototype",
+    "reviewStatus": "requires-subject-expert-review"
+   },
+   "graph": null,
+   "passage": null
+  },
+  {
+   "id": "ENG-003",
+   "subject": "English",
+   "topic": "Prepositions",
+   "prompt": "Choose the correct completion: She is interested ___ astronomy.",
+   "type": "choice",
+   "options": [
+    "at",
+    "for",
+    "in",
+    "on"
+   ],
+   "answer": "in",
+   "explanation": "Interested is followed by in.",
+   "seconds": 75,
+   "marks": 1,
+   "source": {
+    "kind": "original-placeholder",
+    "examBody": null,
+    "year": null,
+    "author": "AI-generated for this prototype",
+    "reviewStatus": "requires-subject-expert-review"
+   },
+   "graph": null,
+   "passage": null
+  },
+  {
+   "id": "ENG-004",
+   "subject": "English",
+   "topic": "Vocabulary",
+   "prompt": "Choose the word nearest in meaning to “reluctant”.",
+   "type": "choice",
+   "options": [
+    "certain",
+    "unwilling",
+    "careless",
+    "delighted"
+   ],
+   "answer": "unwilling",
+   "explanation": "Reluctant means unwilling or hesitant.",
+   "seconds": 75,
+   "marks": 1,
+   "source": {
+    "kind": "original-placeholder",
+    "examBody": null,
+    "year": null,
+    "author": "AI-generated for this prototype",
+    "reviewStatus": "requires-subject-expert-review"
+   },
+   "graph": null,
+   "passage": null
+  },
+  {
+   "id": "ENG-005",
+   "subject": "English",
+   "topic": "Antonyms",
+   "prompt": "Choose the word opposite in meaning to “scarce”.",
+   "type": "choice",
+   "options": [
+    "abundant",
+    "costly",
+    "fragile",
+    "useful"
+   ],
+   "answer": "abundant",
+   "explanation": "Abundant means plentiful.",
+   "seconds": 75,
+   "marks": 1,
+   "source": {
+    "kind": "original-placeholder",
+    "examBody": null,
+    "year": null,
+    "author": "AI-generated for this prototype",
+    "reviewStatus": "requires-subject-expert-review"
+   },
+   "graph": null,
+   "passage": null
+  },
+  {
+   "id": "ENG-006",
+   "subject": "English",
+   "topic": "Idioms",
+   "prompt": "What does “break the ice” mean in a social situation?",
+   "type": "choice",
+   "options": [
+    "end a friendship",
+    "announce a failure",
+    "leave suddenly",
+    "make people feel more relaxed"
+   ],
+   "answer": "make people feel more relaxed",
+   "explanation": "It means reducing awkwardness at the beginning of an interaction.",
+   "seconds": 75,
+   "marks": 1,
+   "source": {
+    "kind": "original-placeholder",
+    "examBody": null,
+    "year": null,
+    "author": "AI-generated for this prototype",
+    "reviewStatus": "requires-subject-expert-review"
+   },
+   "graph": null,
+   "passage": null
+  },
+  {
+   "id": "ENG-007",
+   "subject": "English",
+   "topic": "Concord",
+   "prompt": "Choose the correct completion: Neither the teacher nor the students ___ ready.",
+   "type": "choice",
+   "options": [
+    "was",
+    "has",
+    "are",
+    "is"
+   ],
+   "answer": "are",
+   "explanation": "With neither…nor, the verb agrees here with the nearer plural noun students.",
+   "seconds": 75,
+   "marks": 1,
+   "source": {
+    "kind": "original-placeholder",
+    "examBody": null,
+    "year": null,
+    "author": "AI-generated for this prototype",
+    "reviewStatus": "requires-subject-expert-review"
+   },
+   "graph": null,
+   "passage": null
+  },
+  {
+   "id": "ENG-008",
+   "subject": "English",
+   "topic": "Pronouns",
+   "prompt": "Choose the correct completion: The prize was shared between Amina and ___.",
+   "type": "choice",
+   "options": [
+    "mine",
+    "me",
+    "I",
+    "myself alone"
+   ],
+   "answer": "me",
+   "explanation": "An object pronoun follows between.",
+   "seconds": 75,
+   "marks": 1,
+   "source": {
+    "kind": "original-placeholder",
+    "examBody": null,
+    "year": null,
+    "author": "AI-generated for this prototype",
+    "reviewStatus": "requires-subject-expert-review"
+   },
+   "graph": null,
+   "passage": null
+  },
+  {
+   "id": "ENG-009",
+   "subject": "English",
+   "topic": "Reported speech",
+   "prompt": "Ada said, “I am tired.” Choose the usual past-tense report.",
+   "type": "choice",
+   "options": [
+    "Ada said that she was tired.",
+    "Ada said that I am tired.",
+    "Ada says that she tired.",
+    "Ada said that she is tiring."
+   ],
+   "answer": "Ada said that she was tired.",
+   "explanation": "The pronoun changes to she and am is backshifted to was.",
+   "seconds": 75,
+   "marks": 1,
+   "source": {
+    "kind": "original-placeholder",
+    "examBody": null,
+    "year": null,
+    "author": "AI-generated for this prototype",
+    "reviewStatus": "requires-subject-expert-review"
+   },
+   "graph": null,
+   "passage": null
+  },
+  {
+   "id": "ENG-010",
+   "subject": "English",
+   "topic": "Punctuation",
+   "prompt": "Choose the correctly punctuated sentence.",
+   "type": "choice",
+   "options": [
+    "“Where are you going,” she asked?",
+    "Where are you going? she asked”.",
+    "“Where are you going.” she asked?",
+    "“Where are you going?” she asked."
+   ],
+   "answer": "“Where are you going?” she asked.",
+   "explanation": "The question mark is inside the quotation; the reporting clause follows.",
+   "seconds": 75,
+   "marks": 1,
+   "source": {
+    "kind": "original-placeholder",
+    "examBody": null,
+    "year": null,
+    "author": "AI-generated for this prototype",
+    "reviewStatus": "requires-subject-expert-review"
+   },
+   "graph": null,
+   "passage": null
+  },
+  {
+   "id": "ENG-011",
+   "subject": "English",
+   "topic": "Comparatives",
+   "prompt": "Choose the correct completion: This route is ___ than the old one.",
+   "type": "choice",
+   "options": [
+    "most short",
+    "more shorter",
+    "shorter",
+    "shortest"
+   ],
+   "answer": "shorter",
+   "explanation": "Shorter is the comparative form.",
+   "seconds": 75,
+   "marks": 1,
+   "source": {
+    "kind": "original-placeholder",
+    "examBody": null,
+    "year": null,
+    "author": "AI-generated for this prototype",
+    "reviewStatus": "requires-subject-expert-review"
+   },
+   "graph": null,
+   "passage": null
+  },
+  {
+   "id": "ENG-012",
+   "subject": "English",
+   "topic": "Conditional",
+   "prompt": "Choose the correct completion: If I had known, I ___ you.",
+   "type": "choice",
+   "options": [
+    "have told",
+    "would have told",
+    "will tell",
+    "would tell tomorrow"
+   ],
+   "answer": "would have told",
+   "explanation": "A third conditional uses would have with a past participle.",
+   "seconds": 75,
+   "marks": 1,
+   "source": {
+    "kind": "original-placeholder",
+    "examBody": null,
+    "year": null,
+    "author": "AI-generated for this prototype",
+    "reviewStatus": "requires-subject-expert-review"
+   },
+   "graph": null,
+   "passage": null
+  },
+  {
+   "id": "ENG-013",
+   "subject": "English",
+   "topic": "Vocabulary",
+   "prompt": "Choose the word nearest in meaning to “meticulous”.",
+   "type": "choice",
+   "options": [
+    "very careful",
+    "extremely noisy",
+    "easily frightened",
+    "quickly forgotten"
+   ],
+   "answer": "very careful",
+   "explanation": "Meticulous describes great attention to detail.",
+   "seconds": 75,
+   "marks": 1,
+   "source": {
+    "kind": "original-placeholder",
+    "examBody": null,
+    "year": null,
+    "author": "AI-generated for this prototype",
+    "reviewStatus": "requires-subject-expert-review"
+   },
+   "graph": null,
+   "passage": null
+  },
+  {
+   "id": "ENG-014",
+   "subject": "English",
+   "topic": "Antonyms",
+   "prompt": "Choose the word opposite in meaning to “hostile”.",
+   "type": "choice",
+   "options": [
+    "distant",
+    "silent",
+    "tired",
+    "friendly"
+   ],
+   "answer": "friendly",
+   "explanation": "Friendly contrasts with hostile.",
+   "seconds": 75,
+   "marks": 1,
+   "source": {
+    "kind": "original-placeholder",
+    "examBody": null,
+    "year": null,
+    "author": "AI-generated for this prototype",
+    "reviewStatus": "requires-subject-expert-review"
+   },
+   "graph": null,
+   "passage": null
+  },
+  {
+   "id": "ENG-015",
+   "subject": "English",
+   "topic": "Voice",
+   "prompt": "Choose the passive form of “The gardener watered the plants.”",
+   "type": "choice",
+   "options": [
+    "The gardener was watering plants.",
+    "The plants have watering.",
+    "The plants were watered by the gardener.",
+    "The plants watered the gardener."
+   ],
+   "answer": "The plants were watered by the gardener.",
+   "explanation": "The object becomes the subject, with were watered.",
+   "seconds": 75,
+   "marks": 1,
+   "source": {
+    "kind": "original-placeholder",
+    "examBody": null,
+    "year": null,
+    "author": "AI-generated for this prototype",
+    "reviewStatus": "requires-subject-expert-review"
+   },
+   "graph": null,
+   "passage": null
+  },
+  {
+   "id": "ENG-016",
+   "subject": "English",
+   "topic": "Spelling",
+   "prompt": "Choose the correctly spelt word.",
+   "type": "choice",
+   "options": [
+    "acomodation",
+    "accommodation",
+    "acommodation",
+    "accomodation"
+   ],
+   "answer": "accommodation",
+   "explanation": "Accommodation has double c and double m.",
+   "seconds": 75,
+   "marks": 1,
+   "source": {
+    "kind": "original-placeholder",
+    "examBody": null,
+    "year": null,
+    "author": "AI-generated for this prototype",
+    "reviewStatus": "requires-subject-expert-review"
+   },
+   "graph": null,
+   "passage": null
+  },
+  {
+   "id": "ENG-017",
+   "subject": "English",
+   "topic": "Question tags",
+   "prompt": "Choose the correct completion: You have finished, ___?",
+   "type": "choice",
+   "options": [
+    "haven’t you",
+    "don’t you",
+    "aren’t you",
+    "didn’t you"
+   ],
+   "answer": "haven’t you",
+   "explanation": "The tag repeats the auxiliary have in its negative form.",
+   "seconds": 75,
+   "marks": 1,
+   "source": {
+    "kind": "original-placeholder",
+    "examBody": null,
+    "year": null,
+    "author": "AI-generated for this prototype",
+    "reviewStatus": "requires-subject-expert-review"
+   },
+   "graph": null,
+   "passage": null
+  },
+  {
+   "id": "ENG-018",
+   "subject": "English",
+   "topic": "Articles",
+   "prompt": "Choose the correct completion: She is ___ honest person.",
+   "type": "choice",
+   "options": [
+    "a",
+    "the only an",
+    "no",
+    "an"
+   ],
+   "answer": "an",
+   "explanation": "Honest begins with a vowel sound, so an is used.",
+   "seconds": 75,
+   "marks": 1,
+   "source": {
+    "kind": "original-placeholder",
+    "examBody": null,
+    "year": null,
+    "author": "AI-generated for this prototype",
+    "reviewStatus": "requires-subject-expert-review"
+   },
+   "graph": null,
+   "passage": null
+  },
+  {
+   "id": "ENG-019",
+   "subject": "English",
+   "topic": "Collocations",
+   "prompt": "Choose the correct completion: We must ___ a decision today.",
+   "type": "choice",
+   "options": [
+    "create up",
+    "perform at",
+    "make",
+    "do"
+   ],
+   "answer": "make",
+   "explanation": "Make a decision is the standard collocation.",
+   "seconds": 75,
+   "marks": 1,
+   "source": {
+    "kind": "original-placeholder",
+    "examBody": null,
+    "year": null,
+    "author": "AI-generated for this prototype",
+    "reviewStatus": "requires-subject-expert-review"
+   },
+   "graph": null,
+   "passage": null
+  },
+  {
+   "id": "ENG-020",
+   "subject": "English",
+   "topic": "Relative clauses",
+   "prompt": "Choose the correct completion: This is the book ___ I borrowed.",
+   "type": "choice",
+   "options": [
+    "whose author it",
+    "that",
+    "who",
+    "whom"
+   ],
+   "answer": "that",
+   "explanation": "That can refer to a thing as the object of a relative clause.",
+   "seconds": 75,
+   "marks": 1,
+   "source": {
+    "kind": "original-placeholder",
+    "examBody": null,
+    "year": null,
+    "author": "AI-generated for this prototype",
+    "reviewStatus": "requires-subject-expert-review"
+   },
+   "graph": null,
+   "passage": null
+  },
+  {
+   "id": "ENG-021",
+   "subject": "English",
+   "topic": "Conjunctions",
+   "prompt": "Choose the correct completion: ___ it was raining, they continued the match.",
+   "type": "choice",
+   "options": [
+    "Although",
+    "Because of",
+    "Despite of",
+    "Unless if"
+   ],
+   "answer": "Although",
+   "explanation": "Although introduces a contrast with a complete clause.",
+   "seconds": 75,
+   "marks": 1,
+   "source": {
+    "kind": "original-placeholder",
+    "examBody": null,
+    "year": null,
+    "author": "AI-generated for this prototype",
+    "reviewStatus": "requires-subject-expert-review"
+   },
+   "graph": null,
+   "passage": null
+  },
+  {
+   "id": "ENG-022",
+   "subject": "English",
+   "topic": "Vocabulary",
+   "prompt": "In “The manager gave a concise report”, concise means ___.",
+   "type": "choice",
+   "options": [
+    "angry and loud",
+    "false but useful",
+    "long and repetitive",
+    "brief and clear"
+   ],
+   "answer": "brief and clear",
+   "explanation": "Concise means brief while giving the needed information.",
+   "seconds": 75,
+   "marks": 1,
+   "source": {
+    "kind": "original-placeholder",
+    "examBody": null,
+    "year": null,
+    "author": "AI-generated for this prototype",
+    "reviewStatus": "requires-subject-expert-review"
+   },
+   "graph": null,
+   "passage": null
+  },
+  {
+   "id": "ENG-023",
+   "subject": "English",
+   "topic": "Countability",
+   "prompt": "Choose the correct completion: There are ___ chairs than guests.",
+   "type": "choice",
+   "options": [
+    "little",
+    "much",
+    "fewer",
+    "less"
+   ],
+   "answer": "fewer",
+   "explanation": "Fewer is used for countable plural nouns.",
+   "seconds": 75,
+   "marks": 1,
+   "source": {
+    "kind": "original-placeholder",
+    "examBody": null,
+    "year": null,
+    "author": "AI-generated for this prototype",
+    "reviewStatus": "requires-subject-expert-review"
+   },
+   "graph": null,
+   "passage": null
+  },
+  {
+   "id": "ENG-024",
+   "subject": "English",
+   "topic": "Verb forms",
+   "prompt": "Choose the correct completion: I look forward to ___ from you.",
+   "type": "choice",
+   "options": [
+    "have heard",
+    "hearing",
+    "hear",
+    "heard"
+   ],
+   "answer": "hearing",
+   "explanation": "To is a preposition in look forward to, so it takes the -ing form.",
+   "seconds": 75,
+   "marks": 1,
+   "source": {
+    "kind": "original-placeholder",
+    "examBody": null,
+    "year": null,
+    "author": "AI-generated for this prototype",
+    "reviewStatus": "requires-subject-expert-review"
+   },
+   "graph": null,
+   "passage": null
+  },
+  {
+   "id": "ENG-025",
+   "subject": "English",
+   "topic": "Idioms",
+   "prompt": "If a plan is “on hold”, it is ___.",
+   "type": "choice",
+   "options": [
+    "temporarily paused",
+    "fully completed",
+    "officially rejected forever",
+    "being celebrated"
+   ],
+   "answer": "temporarily paused",
+   "explanation": "On hold means temporarily delayed or suspended.",
+   "seconds": 75,
+   "marks": 1,
+   "source": {
+    "kind": "original-placeholder",
+    "examBody": null,
+    "year": null,
+    "author": "AI-generated for this prototype",
+    "reviewStatus": "requires-subject-expert-review"
+   },
+   "graph": null,
+   "passage": null
+  },
+  {
+   "id": "ENG-026",
+   "subject": "English",
+   "topic": "Comprehension",
+   "prompt": "What problem did the garden initially face?",
+   "type": "choice",
+   "options": [
+    "An unreliable supply of water",
+    "Too many mature trees",
+    "A lack of sunshine",
+    "Excessive rainfall"
+   ],
+   "answer": "An unreliable supply of water",
+   "explanation": "The distant tap and dry-season losses show the water problem.",
+   "seconds": 75,
+   "marks": 1,
+   "source": {
+    "kind": "original-placeholder",
+    "examBody": null,
+    "year": null,
+    "author": "AI-generated for this prototype",
+    "reviewStatus": "requires-subject-expert-review"
+   },
+   "graph": null,
+   "passage": "The school garden once depended on water carried from a distant tap. During the dry season, many seedlings died. A science club installed a tank to collect rainwater from a roof. Members also covered the soil with dry leaves to reduce evaporation. The next season, more seedlings survived, although the club still checked the tank regularly and used water carefully."
+  },
+  {
+   "id": "ENG-027",
+   "subject": "English",
+   "topic": "Comprehension",
+   "prompt": "Why were dry leaves placed on the soil?",
+   "type": "choice",
+   "options": [
+    "To attract birds",
+    "To reduce evaporation",
+    "To increase the soil temperature sharply",
+    "To block all rain"
+   ],
+   "answer": "To reduce evaporation",
+   "explanation": "The passage directly gives this purpose.",
+   "seconds": 75,
+   "marks": 1,
+   "source": {
+    "kind": "original-placeholder",
+    "examBody": null,
+    "year": null,
+    "author": "AI-generated for this prototype",
+    "reviewStatus": "requires-subject-expert-review"
+   },
+   "graph": null,
+   "passage": "The school garden once depended on water carried from a distant tap. During the dry season, many seedlings died. A science club installed a tank to collect rainwater from a roof. Members also covered the soil with dry leaves to reduce evaporation. The next season, more seedlings survived, although the club still checked the tank regularly and used water carefully."
+  },
+  {
+   "id": "ENG-028",
+   "subject": "English",
+   "topic": "Comprehension",
+   "prompt": "Which statement best summarises the passage?",
+   "type": "choice",
+   "options": [
+    "Rainwater makes all care unnecessary.",
+    "Only expensive equipment can save plants.",
+    "Water collection and careful management improved seedling survival.",
+    "The garden was abandoned."
+   ],
+   "answer": "Water collection and careful management improved seedling survival.",
+   "explanation": "Both collection and careful use contributed to improvement.",
+   "seconds": 75,
+   "marks": 1,
+   "source": {
+    "kind": "original-placeholder",
+    "examBody": null,
+    "year": null,
+    "author": "AI-generated for this prototype",
+    "reviewStatus": "requires-subject-expert-review"
+   },
+   "graph": null,
+   "passage": "The school garden once depended on water carried from a distant tap. During the dry season, many seedlings died. A science club installed a tank to collect rainwater from a roof. Members also covered the soil with dry leaves to reduce evaporation. The next season, more seedlings survived, although the club still checked the tank regularly and used water carefully."
+  },
+  {
+   "id": "ENG-029",
+   "subject": "English",
+   "topic": "Comprehension",
+   "prompt": "What does “regularly” suggest about the checks?",
+   "type": "choice",
+   "options": [
+    "They occurred once.",
+    "They were never planned.",
+    "They happened only in emergencies.",
+    "They took place repeatedly over time."
+   ],
+   "answer": "They took place repeatedly over time.",
+   "explanation": "Regular checks are repeated checks.",
+   "seconds": 75,
+   "marks": 1,
+   "source": {
+    "kind": "original-placeholder",
+    "examBody": null,
+    "year": null,
+    "author": "AI-generated for this prototype",
+    "reviewStatus": "requires-subject-expert-review"
+   },
+   "graph": null,
+   "passage": "The school garden once depended on water carried from a distant tap. During the dry season, many seedlings died. A science club installed a tank to collect rainwater from a roof. Members also covered the soil with dry leaves to reduce evaporation. The next season, more seedlings survived, although the club still checked the tank regularly and used water carefully."
+  },
+  {
+   "id": "ENG-030",
+   "subject": "English",
+   "topic": "Comprehension",
+   "prompt": "Which conclusion is supported?",
+   "type": "choice",
+   "options": [
+    "The tank removed the need to conserve water.",
+    "The club continued to manage its water supply.",
+    "All seedlings survived.",
+    "The school stopped using science."
+   ],
+   "answer": "The club continued to manage its water supply.",
+   "explanation": "Members still checked the tank and used water carefully.",
+   "seconds": 75,
+   "marks": 1,
+   "source": {
+    "kind": "original-placeholder",
+    "examBody": null,
+    "year": null,
+    "author": "AI-generated for this prototype",
+    "reviewStatus": "requires-subject-expert-review"
+   },
+   "graph": null,
+   "passage": "The school garden once depended on water carried from a distant tap. During the dry season, many seedlings died. A science club installed a tank to collect rainwater from a roof. Members also covered the soil with dry leaves to reduce evaporation. The next season, more seedlings survived, although the club still checked the tank regularly and used water carefully."
+  },
+  {
+   "id": "BIO-001",
+   "subject": "Biology",
+   "topic": "Cells",
+   "prompt": "Which structure controls most activities of a typical animal cell?",
+   "type": "choice",
+   "options": [
+    "Nucleus",
+    "Cell wall",
+    "Vacuole",
+    "Chloroplast"
+   ],
+   "answer": "Nucleus",
+   "explanation": "The nucleus contains genetic material involved in controlling cell activities.",
+   "seconds": 75,
+   "marks": 1,
+   "source": {
+    "kind": "original-placeholder",
+    "examBody": null,
+    "year": null,
+    "author": "AI-generated for this prototype",
+    "reviewStatus": "requires-subject-expert-review"
+   },
+   "graph": null,
+   "passage": null
+  },
+  {
+   "id": "BIO-002",
+   "subject": "Biology",
+   "topic": "Photosynthesis",
+   "prompt": "Which gas is absorbed from the air during photosynthesis?",
+   "type": "choice",
+   "options": [
+    "Oxygen",
+    "Carbon dioxide",
+    "Nitrogen",
+    "Hydrogen"
+   ],
+   "answer": "Carbon dioxide",
+   "explanation": "Carbon dioxide supplies carbon for carbohydrate formation.",
+   "seconds": 75,
+   "marks": 1,
+   "source": {
+    "kind": "original-placeholder",
+    "examBody": null,
+    "year": null,
+    "author": "AI-generated for this prototype",
+    "reviewStatus": "requires-subject-expert-review"
+   },
+   "graph": null,
+   "passage": null
+  },
+  {
+   "id": "BIO-003",
+   "subject": "Biology",
+   "topic": "Respiration",
+   "prompt": "Which organelle is the main site of aerobic respiration in eukaryotic cells?",
+   "type": "choice",
+   "options": [
+    "Ribosome",
+    "Golgi apparatus",
+    "Mitochondrion",
+    "Nucleolus"
+   ],
+   "answer": "Mitochondrion",
+   "explanation": "Most ATP from aerobic respiration is produced in mitochondria.",
+   "seconds": 75,
+   "marks": 1,
+   "source": {
+    "kind": "original-placeholder",
+    "examBody": null,
+    "year": null,
+    "author": "AI-generated for this prototype",
+    "reviewStatus": "requires-subject-expert-review"
+   },
+   "graph": null,
+   "passage": null
+  },
+  {
+   "id": "BIO-004",
+   "subject": "Biology",
+   "topic": "Osmosis",
+   "prompt": "Osmosis is the net movement of water through a selectively permeable membrane from ___.",
+   "type": "choice",
+   "options": [
+    "lower water potential to higher water potential",
+    "higher solute concentration to lower solute concentration in every case",
+    "a solid directly to a gas",
+    "higher water potential to lower water potential"
+   ],
+   "answer": "higher water potential to lower water potential",
+   "explanation": "Water moves down its water-potential gradient.",
+   "seconds": 75,
+   "marks": 1,
+   "source": {
+    "kind": "original-placeholder",
+    "examBody": null,
+    "year": null,
+    "author": "AI-generated for this prototype",
+    "reviewStatus": "requires-subject-expert-review"
+   },
+   "graph": null,
+   "passage": null
+  },
+  {
+   "id": "BIO-005",
+   "subject": "Biology",
+   "topic": "Transport",
+   "prompt": "Which plant tissue mainly transports water and mineral ions from the roots?",
+   "type": "choice",
+   "options": [
+    "Xylem",
+    "Phloem",
+    "Epidermis",
+    "Cambium"
+   ],
+   "answer": "Xylem",
+   "explanation": "Xylem conducts water and dissolved mineral ions.",
+   "seconds": 75,
+   "marks": 1,
+   "source": {
+    "kind": "original-placeholder",
+    "examBody": null,
+    "year": null,
+    "author": "AI-generated for this prototype",
+    "reviewStatus": "requires-subject-expert-review"
+   },
+   "graph": null,
+   "passage": null
+  },
+  {
+   "id": "BIO-006",
+   "subject": "Biology",
+   "topic": "Transport",
+   "prompt": "Which blood component is primarily involved in clotting?",
+   "type": "choice",
+   "options": [
+    "Red blood cells",
+    "Platelets",
+    "Plasma proteins only used in transport",
+    "Lymphocytes"
+   ],
+   "answer": "Platelets",
+   "explanation": "Platelets help initiate blood clotting.",
+   "seconds": 75,
+   "marks": 1,
+   "source": {
+    "kind": "original-placeholder",
+    "examBody": null,
+    "year": null,
+    "author": "AI-generated for this prototype",
+    "reviewStatus": "requires-subject-expert-review"
+   },
+   "graph": null,
+   "passage": null
+  },
+  {
+   "id": "BIO-007",
+   "subject": "Biology",
+   "topic": "Gas exchange",
+   "prompt": "The main sites of gas exchange in human lungs are the ___.",
+   "type": "choice",
+   "options": [
+    "bronchi",
+    "trachea",
+    "alveoli",
+    "ribs"
+   ],
+   "answer": "alveoli",
+   "explanation": "Alveoli provide thin surfaces and a large area for gas exchange.",
+   "seconds": 75,
+   "marks": 1,
+   "source": {
+    "kind": "original-placeholder",
+    "examBody": null,
+    "year": null,
+    "author": "AI-generated for this prototype",
+    "reviewStatus": "requires-subject-expert-review"
+   },
+   "graph": null,
+   "passage": null
+  },
+  {
+   "id": "BIO-008",
+   "subject": "Biology",
+   "topic": "Nutrition",
+   "prompt": "Which enzyme breaks down starch?",
+   "type": "choice",
+   "options": [
+    "Lipase",
+    "Pepsin",
+    "Maltase",
+    "Amylase"
+   ],
+   "answer": "Amylase",
+   "explanation": "Amylase hydrolyses starch into smaller sugars.",
+   "seconds": 75,
+   "marks": 1,
+   "source": {
+    "kind": "original-placeholder",
+    "examBody": null,
+    "year": null,
+    "author": "AI-generated for this prototype",
+    "reviewStatus": "requires-subject-expert-review"
+   },
+   "graph": null,
+   "passage": null
+  },
+  {
+   "id": "BIO-009",
+   "subject": "Biology",
+   "topic": "Excretion",
+   "prompt": "Which organ removes urea from the blood to form urine?",
+   "type": "choice",
+   "options": [
+    "Kidney",
+    "Heart",
+    "Stomach",
+    "Pancreas"
+   ],
+   "answer": "Kidney",
+   "explanation": "Kidneys filter blood and excrete urea in urine.",
+   "seconds": 75,
+   "marks": 1,
+   "source": {
+    "kind": "original-placeholder",
+    "examBody": null,
+    "year": null,
+    "author": "AI-generated for this prototype",
+    "reviewStatus": "requires-subject-expert-review"
+   },
+   "graph": null,
+   "passage": null
+  },
+  {
+   "id": "BIO-010",
+   "subject": "Biology",
+   "topic": "Homeostasis",
+   "prompt": "Which hormone lowers blood glucose concentration?",
+   "type": "choice",
+   "options": [
+    "Glucagon",
+    "Insulin",
+    "Adrenaline",
+    "Thyroxine"
+   ],
+   "answer": "Insulin",
+   "explanation": "Insulin promotes uptake and storage of glucose.",
+   "seconds": 75,
+   "marks": 1,
+   "source": {
+    "kind": "original-placeholder",
+    "examBody": null,
+    "year": null,
+    "author": "AI-generated for this prototype",
+    "reviewStatus": "requires-subject-expert-review"
+   },
+   "graph": null,
+   "passage": null
+  },
+  {
+   "id": "BIO-011",
+   "subject": "Biology",
+   "topic": "Genetics",
+   "prompt": "An organism with two identical alleles for a gene is ___.",
+   "type": "choice",
+   "options": [
+    "heterozygous",
+    "hybrid for that gene",
+    "homozygous",
+    "haploid by definition"
+   ],
+   "answer": "homozygous",
+   "explanation": "Homozygous means having identical alleles at a locus.",
+   "seconds": 75,
+   "marks": 1,
+   "source": {
+    "kind": "original-placeholder",
+    "examBody": null,
+    "year": null,
+    "author": "AI-generated for this prototype",
+    "reviewStatus": "requires-subject-expert-review"
+   },
+   "graph": null,
+   "passage": null
+  },
+  {
+   "id": "BIO-012",
+   "subject": "Biology",
+   "topic": "Genetics",
+   "prompt": "In a cross Aa × Aa, what fraction of offspring is expected to be aa?",
+   "type": "choice",
+   "options": [
+    "1/2",
+    "3/4",
+    "1",
+    "1/4"
+   ],
+   "answer": "1/4",
+   "explanation": "The possible combinations are AA, Aa, Aa and aa.",
+   "seconds": 75,
+   "marks": 1,
+   "source": {
+    "kind": "original-placeholder",
+    "examBody": null,
+    "year": null,
+    "author": "AI-generated for this prototype",
+    "reviewStatus": "requires-subject-expert-review"
+   },
+   "graph": null,
+   "passage": null
+  },
+  {
+   "id": "BIO-013",
+   "subject": "Biology",
+   "topic": "Cell division",
+   "prompt": "Which process produces gametes with half the usual chromosome number?",
+   "type": "choice",
+   "options": [
+    "Meiosis",
+    "Mitosis",
+    "Binary fission",
+    "Budding"
+   ],
+   "answer": "Meiosis",
+   "explanation": "Meiosis reduces the chromosome number.",
+   "seconds": 75,
+   "marks": 1,
+   "source": {
+    "kind": "original-placeholder",
+    "examBody": null,
+    "year": null,
+    "author": "AI-generated for this prototype",
+    "reviewStatus": "requires-subject-expert-review"
+   },
+   "graph": null,
+   "passage": null
+  },
+  {
+   "id": "BIO-014",
+   "subject": "Biology",
+   "topic": "Ecology",
+   "prompt": "An organism that makes its own organic food from inorganic substances is a ___.",
+   "type": "choice",
+   "options": [
+    "primary consumer",
+    "producer",
+    "secondary consumer",
+    "parasite only"
+   ],
+   "answer": "producer",
+   "explanation": "Producers form the base of many food chains.",
+   "seconds": 75,
+   "marks": 1,
+   "source": {
+    "kind": "original-placeholder",
+    "examBody": null,
+    "year": null,
+    "author": "AI-generated for this prototype",
+    "reviewStatus": "requires-subject-expert-review"
+   },
+   "graph": null,
+   "passage": null
+  },
+  {
+   "id": "BIO-015",
+   "subject": "Biology",
+   "topic": "Ecology",
+   "prompt": "In grass → grasshopper → frog → snake, the frog is a ___.",
+   "type": "choice",
+   "options": [
+    "producer",
+    "primary consumer",
+    "secondary consumer",
+    "decomposer"
+   ],
+   "answer": "secondary consumer",
+   "explanation": "The frog feeds on the primary consumer, the grasshopper.",
+   "seconds": 75,
+   "marks": 1,
+   "source": {
+    "kind": "original-placeholder",
+    "examBody": null,
+    "year": null,
+    "author": "AI-generated for this prototype",
+    "reviewStatus": "requires-subject-expert-review"
+   },
+   "graph": null,
+   "passage": null
+  },
+  {
+   "id": "BIO-016",
+   "subject": "Biology",
+   "topic": "Ecology",
+   "prompt": "Which relationship benefits both participating species?",
+   "type": "choice",
+   "options": [
+    "Parasitism",
+    "Predation",
+    "Competition",
+    "Mutualism"
+   ],
+   "answer": "Mutualism",
+   "explanation": "Both partners benefit in mutualism.",
+   "seconds": 75,
+   "marks": 1,
+   "source": {
+    "kind": "original-placeholder",
+    "examBody": null,
+    "year": null,
+    "author": "AI-generated for this prototype",
+    "reviewStatus": "requires-subject-expert-review"
+   },
+   "graph": null,
+   "passage": null
+  },
+  {
+   "id": "BIO-017",
+   "subject": "Biology",
+   "topic": "Microorganisms",
+   "prompt": "Which organism is a fungus?",
+   "type": "choice",
+   "options": [
+    "Yeast",
+    "Amoeba",
+    "Euglena",
+    "Plasmodium"
+   ],
+   "answer": "Yeast",
+   "explanation": "Yeast is a unicellular fungus.",
+   "seconds": 75,
+   "marks": 1,
+   "source": {
+    "kind": "original-placeholder",
+    "examBody": null,
+    "year": null,
+    "author": "AI-generated for this prototype",
+    "reviewStatus": "requires-subject-expert-review"
+   },
+   "graph": null,
+   "passage": null
+  },
+  {
+   "id": "BIO-018",
+   "subject": "Biology",
+   "topic": "Disease",
+   "prompt": "Malaria is caused by a ___.",
+   "type": "choice",
+   "options": [
+    "virus",
+    "protozoan parasite",
+    "fungus",
+    "tapeworm"
+   ],
+   "answer": "protozoan parasite",
+   "explanation": "Plasmodium is a protozoan parasite.",
+   "seconds": 75,
+   "marks": 1,
+   "source": {
+    "kind": "original-placeholder",
+    "examBody": null,
+    "year": null,
+    "author": "AI-generated for this prototype",
+    "reviewStatus": "requires-subject-expert-review"
+   },
+   "graph": null,
+   "passage": null
+  },
+  {
+   "id": "BIO-019",
+   "subject": "Biology",
+   "topic": "Immunity",
+   "prompt": "Vaccination primarily helps the body develop ___.",
+   "type": "choice",
+   "options": [
+    "extra red blood cells immediately",
+    "a permanent rise in body temperature",
+    "specific immune memory",
+    "resistance to every possible disease"
+   ],
+   "answer": "specific immune memory",
+   "explanation": "Vaccines stimulate immune responses and memory against specific antigens.",
+   "seconds": 75,
+   "marks": 1,
+   "source": {
+    "kind": "original-placeholder",
+    "examBody": null,
+    "year": null,
+    "author": "AI-generated for this prototype",
+    "reviewStatus": "requires-subject-expert-review"
+   },
+   "graph": null,
+   "passage": null
+  },
+  {
+   "id": "BIO-020",
+   "subject": "Biology",
+   "topic": "Reproduction",
+   "prompt": "In flowering plants, fertilisation usually occurs in the ___.",
+   "type": "choice",
+   "options": [
+    "anther",
+    "stigma surface",
+    "petal",
+    "ovule"
+   ],
+   "answer": "ovule",
+   "explanation": "The egg is in the embryo sac within the ovule.",
+   "seconds": 75,
+   "marks": 1,
+   "source": {
+    "kind": "original-placeholder",
+    "examBody": null,
+    "year": null,
+    "author": "AI-generated for this prototype",
+    "reviewStatus": "requires-subject-expert-review"
+   },
+   "graph": null,
+   "passage": null
+  },
+  {
+   "id": "BIO-021",
+   "subject": "Biology",
+   "topic": "Reproduction",
+   "prompt": "Pollination is the transfer of pollen from the anther to the ___.",
+   "type": "choice",
+   "options": [
+    "stigma",
+    "ovary wall",
+    "root",
+    "sepal"
+   ],
+   "answer": "stigma",
+   "explanation": "Pollination places pollen on a receptive stigma.",
+   "seconds": 75,
+   "marks": 1,
+   "source": {
+    "kind": "original-placeholder",
+    "examBody": null,
+    "year": null,
+    "author": "AI-generated for this prototype",
+    "reviewStatus": "requires-subject-expert-review"
+   },
+   "graph": null,
+   "passage": null
+  },
+  {
+   "id": "BIO-022",
+   "subject": "Biology",
+   "topic": "Germination",
+   "prompt": "Which condition is generally required for seed germination?",
+   "type": "choice",
+   "options": [
+    "Continuous bright light for all species",
+    "Water",
+    "Soil in every case",
+    "A supply of flowers"
+   ],
+   "answer": "Water",
+   "explanation": "Water is needed to activate processes in the seed.",
+   "seconds": 75,
+   "marks": 1,
+   "source": {
+    "kind": "original-placeholder",
+    "examBody": null,
+    "year": null,
+    "author": "AI-generated for this prototype",
+    "reviewStatus": "requires-subject-expert-review"
+   },
+   "graph": null,
+   "passage": null
+  },
+  {
+   "id": "BIO-023",
+   "subject": "Biology",
+   "topic": "Adaptation",
+   "prompt": "Which feature reduces water loss in many desert plants?",
+   "type": "choice",
+   "options": [
+    "Very thin unprotected leaves",
+    "Permanently wide-open stomata",
+    "A thick waxy cuticle",
+    "Absence of any root system"
+   ],
+   "answer": "A thick waxy cuticle",
+   "explanation": "A waxy cuticle reduces evaporation from the surface.",
+   "seconds": 75,
+   "marks": 1,
+   "source": {
+    "kind": "original-placeholder",
+    "examBody": null,
+    "year": null,
+    "author": "AI-generated for this prototype",
+    "reviewStatus": "requires-subject-expert-review"
+   },
+   "graph": null,
+   "passage": null
+  },
+  {
+   "id": "BIO-024",
+   "subject": "Biology",
+   "topic": "Classification",
+   "prompt": "Which group contains animals with a backbone?",
+   "type": "choice",
+   "options": [
+    "Annelids",
+    "Molluscs",
+    "Arthropods",
+    "Vertebrates"
+   ],
+   "answer": "Vertebrates",
+   "explanation": "A vertebral column is characteristic of vertebrates.",
+   "seconds": 75,
+   "marks": 1,
+   "source": {
+    "kind": "original-placeholder",
+    "examBody": null,
+    "year": null,
+    "author": "AI-generated for this prototype",
+    "reviewStatus": "requires-subject-expert-review"
+   },
+   "graph": null,
+   "passage": null
+  },
+  {
+   "id": "BIO-025",
+   "subject": "Biology",
+   "topic": "Nervous system",
+   "prompt": "A reflex action is typically ___.",
+   "type": "choice",
+   "options": [
+    "rapid and involuntary",
+    "slow and always planned",
+    "controlled only by conscious choice",
+    "impossible without learning"
+   ],
+   "answer": "rapid and involuntary",
+   "explanation": "Reflexes are automatic responses to stimuli.",
+   "seconds": 75,
+   "marks": 1,
+   "source": {
+    "kind": "original-placeholder",
+    "examBody": null,
+    "year": null,
+    "author": "AI-generated for this prototype",
+    "reviewStatus": "requires-subject-expert-review"
+   },
+   "graph": null,
+   "passage": null
+  },
+  {
+   "id": "BIO-026",
+   "subject": "Biology",
+   "topic": "Skeleton",
+   "prompt": "Which type of joint is found at the human shoulder?",
+   "type": "choice",
+   "options": [
+    "Hinge",
+    "Ball-and-socket",
+    "Fixed",
+    "Pivot"
+   ],
+   "answer": "Ball-and-socket",
+   "explanation": "A ball-and-socket joint allows movement in several directions.",
+   "seconds": 75,
+   "marks": 1,
+   "source": {
+    "kind": "original-placeholder",
+    "examBody": null,
+    "year": null,
+    "author": "AI-generated for this prototype",
+    "reviewStatus": "requires-subject-expert-review"
+   },
+   "graph": null,
+   "passage": null
+  },
+  {
+   "id": "BIO-027",
+   "subject": "Biology",
+   "topic": "Mineral nutrition",
+   "prompt": "Lack of nitrate ions directly limits a plant’s ability to make ___.",
+   "type": "choice",
+   "options": [
+    "water molecules by osmosis",
+    "oxygen atoms",
+    "amino acids",
+    "sunlight"
+   ],
+   "answer": "amino acids",
+   "explanation": "Nitrogen is needed for amino acids and proteins.",
+   "seconds": 75,
+   "marks": 1,
+   "source": {
+    "kind": "original-placeholder",
+    "examBody": null,
+    "year": null,
+    "author": "AI-generated for this prototype",
+    "reviewStatus": "requires-subject-expert-review"
+   },
+   "graph": null,
+   "passage": null
+  },
+  {
+   "id": "BIO-028",
+   "subject": "Biology",
+   "topic": "Conservation",
+   "prompt": "Which action best supports conservation of a threatened forest species?",
+   "type": "choice",
+   "options": [
+    "Removing all mature trees",
+    "Hunting during its breeding season",
+    "Introducing uncontrolled fires",
+    "Protecting its habitat"
+   ],
+   "answer": "Protecting its habitat",
+   "explanation": "Protecting habitat supports survival and reproduction.",
+   "seconds": 75,
+   "marks": 1,
+   "source": {
+    "kind": "original-placeholder",
+    "examBody": null,
+    "year": null,
+    "author": "AI-generated for this prototype",
+    "reviewStatus": "requires-subject-expert-review"
+   },
+   "graph": null,
+   "passage": null
+  },
+  {
+   "id": "BIO-029",
+   "subject": "Biology",
+   "topic": "Evolution",
+   "prompt": "Natural selection acts on ___.",
+   "type": "choice",
+   "options": [
+    "heritable variation affecting survival and reproduction",
+    "all acquired injuries equally",
+    "only the largest organisms",
+    "traits chosen consciously by organisms"
+   ],
+   "answer": "heritable variation affecting survival and reproduction",
+   "explanation": "Heritable differences can affect reproductive success.",
+   "seconds": 75,
+   "marks": 1,
+   "source": {
+    "kind": "original-placeholder",
+    "examBody": null,
+    "year": null,
+    "author": "AI-generated for this prototype",
+    "reviewStatus": "requires-subject-expert-review"
+   },
+   "graph": null,
+   "passage": null
+  },
+  {
+   "id": "BIO-030",
+   "subject": "Biology",
+   "topic": "Food tests",
+   "prompt": "A blue-black colour after adding iodine solution indicates the presence of ___.",
+   "type": "choice",
+   "options": [
+    "protein",
+    "starch",
+    "fat",
+    "glucose"
+   ],
+   "answer": "starch",
+   "explanation": "Iodine gives a blue-black colour with starch.",
+   "seconds": 75,
+   "marks": 1,
+   "source": {
+    "kind": "original-placeholder",
+    "examBody": null,
+    "year": null,
+    "author": "AI-generated for this prototype",
+    "reviewStatus": "requires-subject-expert-review"
+   },
+   "graph": null,
+   "passage": null
+  }
+ ]
+}

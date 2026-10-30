@@ -1,0 +1,24 @@
+{
+  "name": "gradient-mock-exam",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "engines": { "node": ">=22.13" },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "start": "node server/index.mjs",
+    "test": "vitest run",
+    "bank:sqlite": "node tools/build-sqlite.mjs"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.3",
+    "jsdom": "^25.0.1",
+    "vite": "^5.4.10",
+    "vitest": "^2.1.4"
+  }
+}
