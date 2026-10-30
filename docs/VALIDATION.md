@@ -1,17 +1,20 @@
 # Validation record
 
-## Automated (`npm test`, Node 22.16, 57 tests)
+## Automated (`npm test`, Node 22.16, 60 tests)
 
-- **Engine (9):** deadline locks the last acknowledged draft and refuses late edits; stale revisions refused;
+- **Engine (11):** deadline locks the last acknowledged draft and refuses late edits; stale revisions refused;
   retried submit advances once and early submission starts the next clock at submission time; time away
   expires every elapsed question at its own deadline; snapshots omit answer, explanation and provenance;
   results gated until complete; numeric marking (fractions, signs, decimals, no evaluation); draft
   sanitising (ink clamped, conversions must reference real strokes); locked responses keep typed working,
-  ink and converted text; the bank (90 unique original placeholder items, valid keys) and exam definitions.
-- **HTTP (5):** exam summary exposes size and timing only; full start → save → stale save → submit →
+  ink and converted text; the bank (90 unique original placeholder items, valid keys) and exam definitions;
+  subject exams draw 2 random questions from their own subject (20 draws give many different pairs),
+  mixed draws across all three; unseen questions first, then the longest-ago ones.
+- **HTTP (6):** exam summary exposes size and timing only; full start → save → stale save → submit →
   idempotent retry → recognition → expiry while away → review flow with a controlled clock; unknown or
   missing tokens refused, recognition needs a live attempt; 503 and `recognition: false` without a
-  recognition service; queued marking returns 202 "pending".
+  recognition service; queued marking returns 202 "pending"; the subject list; 15 attempts by one learner
+  get all 30 maths questions with no repeats, and the 16th brings back the longest-ago ones.
 - **Client session (8):** clock follows server time; debounced, ordered saves with rising revisions; stale
   retry above the server revision; offline backup restored on resume for the same open question only;
   expiry elsewhere moves on with a notice and older snapshots are ignored; input stops at zero and the
@@ -47,6 +50,8 @@ traversal (`/..%2fdata/…`, `/%2e%2e/server/…`) → 403; video byte ranges �
 - Completion against `references/04`: celebrate clip, sparkles, confetti, finisher badge, honest summary
   (submitted vs. locked at time end), review popup with marks and explanations.
 - Retake: completion → Retake exam → preparation → check → a fresh attempt with full time.
+- Subject picker: Mathematics / English / Biology / Mixed with counts and timing; English attempts drew
+  different random questions each time; a running attempt locks the subject until it ends.
 - Three-subject exam: multiple choice in keyboard and pen layouts; answer kept across mode switch.
 - Sizes: 1672×941, 1440×900, 1024×768 landscape, 768×1024 portrait.
 - Console: no errors or React warnings.

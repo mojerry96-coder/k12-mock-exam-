@@ -70,7 +70,18 @@ async function runDeviceCheck(options, onProgress) {
  * The mock exam module: preparation → one timed question at a time → completion. Host-facing
  * behaviour comes in through `host` (see host.js); everything about timing comes from the server.
  */
-export function MockExam({ api, examId, assets, host, storage }) {
+// An anonymous key kept on this device so the server can avoid repeating questions. The host's
+// learner id replaces it once integrated.
+function learnerKey(host) {
+  if (host.learnerId) return host.learnerId;
+  try {
+    let k = localStorage.getItem('mock-learner');
+    if (!k) { k = crypto.randomUUID?.() ?? `${Date.now().toString(36)}${Math.random().toString(36).slice(2)}`; localStorage.setItem('mock-learner', k); }
+    return k;
+  } catch { return ''; }
+}
+
+export function MockExam({ api, examId: initialExam, assets, host, storage }) {
   const local = useMemo(() => store(storage), [storage]);
   const session = useMemo(() => new ExamSession({
     api, storage,
@@ -79,6 +90,9 @@ export function MockExam({ api, examId, assets, host, storage }) {
   const s = useSyncExternalStore((fn) => session.subscribe(fn), () => session.state);
   const [mode, setModeState] = useState(() => local.get('mock-input-mode') || detectMode());
   const [summary, setSummary] = useState(null);
+  const [exams, setExams] = useState([]);
+  const [examId, setExamIdState] = useState(() => initialExam || local.get('mock-exam-subject') || null);
+  const setExamId = (id) => { setExamIdState(id); local.set('mock-exam-subject', id); };
   const [health, setHealth] = useState({ exam: true, recognition: false });
   const [device, setDevice] = useState(null);
   const [popup, setPopup] = useState(null);
@@ -99,12 +113,20 @@ export function MockExam({ api, examId, assets, host, storage }) {
   useEffect(() => {
     let live = true;
     session.attach();
-    api.exam(examId).then((x) => live && setSummary(x)).catch((e) => live && say(e.message));
+    api.exams().then((x) => { if (!live) return; setExams(x.exams); setExamIdState((id) => (id && (x.exams.some((e) => e.id === id) || id === 'gradient-challenge') ? id : x.defaultExam)); }).catch((e) => live && say(e.message));
     api.health().then((h) => live && setHealth(h));
-    // Only an attempt of this exam that is still running can be resumed; a finished one starts afresh.
-    if (api.hasSession()) api.current().then((x) => live && setCanResume(x.status === 'active' && x.exam?.id === examId)).catch(() => live && setCanResume(false));
+    // A running attempt is resumed as it is (its subject included); a finished one starts afresh.
+    if (api.hasSession()) api.current().then((x) => { if (!live) return; const running = x.status === 'active'; setCanResume(running); if (running && x.exam?.id) setExamIdState(x.exam.id); }).catch(() => live && setCanResume(false));
     return () => { live = false; session.detach(); };
   }, []);
+
+  useEffect(() => {
+    if (!examId) return undefined;
+    let live = true;
+    setSummary(null);
+    api.exam(examId).then((x) => live && setSummary(x)).catch((e) => live && say(e.message));
+    return () => { live = false; };
+  }, [examId]);
 
   // A question changed under an open popup (time ran out): close what belonged to that question.
   useEffect(() => {
@@ -143,7 +165,7 @@ export function MockExam({ api, examId, assets, host, storage }) {
   async function start() {
     if (host.deviceCheck && !device?.trusted?.ok) { say('The secure exam check has not passed, so this exam can’t start.'); return; }
     const resuming = canResume;
-    const r = resuming ? await session.resume() : await session.start(examId);
+    const r = resuming ? await session.resume() : await session.start(examId, learnerKey(host));
     if (!r.ok) {
       if (resuming) { setCanResume(api.hasSession()); say(r.error === 'Unknown attempt' ? 'That attempt has ended on this device. Start a new one.' : r.error); return; }
       say(r.error || 'Couldn’t start the exam. Check your connection.');
@@ -209,6 +231,7 @@ export function MockExam({ api, examId, assets, host, storage }) {
       <Backdrop />
       {s.phase === 'prepare' && (
         <Preparation assets={assets} summary={summary} mode={mode} onMode={(m) => { setMode(m); setDevice(null); }} device={device} canResume={canResume} busy={s.busy}
+          onSubject={exams.length > 1 && !canResume ? () => setPopup('subject') : null}
           onCheck={checkDevice} onStart={start} onTiming={() => setPopup('timing')} onClose={exitNow} />
       )}
       {s.phase === 'exam' && snap?.question && (mode === 'tablet'
@@ -224,13 +247,26 @@ export function MockExam({ api, examId, assets, host, storage }) {
         {summary && (
           <>
             <ul className="timing-list">
-              {summary.perSubject.map((p) => <li key={p.subject}><b>{p.subject}</b><span>{p.count} × {minutes(p.seconds)}</span></li>)}
-              <li className="total"><b>Longest possible</b><span>{minutes(summary.seconds.reduce((a, b) => a + b, 0))}</span></li>
+              {summary.perSubject.map((p) => <li key={p.subject}><b>{p.subject}</b><span>{minutes(p.seconds)} a question</span></li>)}
+              <li className="total"><b>{summary.count} questions, longest possible</b><span>{minutes(summary.count * summary.maxSeconds)}</span></li>
             </ul>
-            <p className="quiet">Each question has its own timer, which keeps running if you leave, lose connection or switch apps. Submitting early moves straight on; you can’t go back.</p>
+            <p className="quiet">Questions are picked at random from {summary.available}, and you won’t see the same ones again until you’ve had them all. Each question has its own timer, which keeps running if you leave, lose connection or switch apps. Submitting early moves straight on; you can’t go back.</p>
           </>
         )}
         <div className="row"><button className="primary" data-autofocus onClick={() => setPopup(null)}>Got it</button></div>
+      </Popover>
+
+      <Popover open={popup === 'subject'} title="Choose a subject" onClose={() => setPopup(null)} fiti assets={assets} className="subject-pop">
+        <div className="subject-list" role="radiogroup" aria-label="Subject">
+          {exams.map((e) => (
+            <button key={e.id} role="radio" aria-checked={e.id === examId} className={`subject-card${e.id === examId ? ' chosen' : ''}`}
+              data-autofocus={e.id === examId ? true : undefined} onClick={() => { setExamId(e.id); setPopup(null); }}>
+              <b>{e.subjects.length > 1 ? 'Mixed' : e.subjects[0]}</b>
+              <span>{e.subjects.length > 1 ? e.subjects.join(', ') : `${e.available} questions`} · {e.minSeconds === e.maxSeconds ? minutes(e.maxSeconds) : `up to ${minutes(e.maxSeconds)}`} each</span>
+            </button>
+          ))}
+        </div>
+        <p className="quiet">Each attempt picks {summary?.count ?? 2} questions at random, new ones each time.</p>
       </Popover>
 
       <Popover open={popup === 'submit'} title={last ? 'Submit your exam?' : 'Submit this question?'} onClose={() => setPopup(null)}>

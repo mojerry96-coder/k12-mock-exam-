@@ -2,13 +2,13 @@ import { Fitila } from '../components/Fitila.jsx';
 import { WriteOn } from '../components/WriteOn.jsx';
 import { Icon } from '../components/Icons.jsx';
 
-export const minutes = (s) => (s % 60 === 0 ? `${s / 60} min` : s < 60 ? `${s} sec` : `${Math.floor(s / 60)} min ${s % 60} s`);
+export const minutes = (s) => (s % 60 === 0 ? `${s / 60} min` : s < 180 ? `${s} sec` : `${Math.floor(s / 60)} min ${s % 60} s`);
 
 // Preparation: Fitila waving on the left, the exam's badge, size, rules and input choice on the
 // right, then the device check. Nothing about the questions themselves is shown before the start.
-export function Preparation({ assets, summary, mode, onMode, device, canResume, busy, onCheck, onStart, onTiming, onClose }) {
+export function Preparation({ assets, summary, mode, onMode, device, canResume, busy, onSubject, onCheck, onStart, onTiming, onClose }) {
   const deviceReady = device?.status === 'done' && device.ok;
-  const sameTime = summary && summary.seconds.every((s) => s === summary.seconds[0]);
+  const sameTime = summary && summary.minSeconds === summary.maxSeconds;
   return (
     <main className="intro prep">
       <CloseButton onClose={onClose} label="Close mock exam" />
@@ -22,7 +22,7 @@ export function Preparation({ assets, summary, mode, onMode, device, canResume, 
         <div className="badge-panel rise" style={{ '--d': '120ms' }}>
           <img className="badge" src={`${assets}/badge.webp`} alt="" />
           <div>
-            <p className="badge-kicker">{summary?.label ?? 'Mock exam'}</p>
+            <p className="badge-kicker">{summary?.label ?? 'Mock exam'}{onSubject && <> · <button className="link change-subject" onClick={onSubject}>Change subject</button></>}</p>
             <h2 className="badge-title">{summary?.title ?? '…'}</h2>
           </div>
         </div>
@@ -30,7 +30,7 @@ export function Preparation({ assets, summary, mode, onMode, device, canResume, 
         <div className="stat-panel rise" style={{ '--d': '200ms' }}>
           <span className="stat"><i className="tile purple"><Icon.doc /></i><b>{summary ? `${summary.count} question${summary.count === 1 ? '' : 's'}` : '…'}</b></span>
           <span className="stat-sep" aria-hidden="true" />
-          <span className="stat"><i className="tile green"><Icon.clock /></i><b>{summary ? (sameTime ? `${minutes(summary.seconds[0])} each` : `Up to ${minutes(Math.max(...summary.seconds))}`) : '…'}</b></span>
+          <span className="stat"><i className="tile green"><Icon.clock /></i><b>{summary ? (sameTime ? `${minutes(summary.maxSeconds)} each` : `Up to ${minutes(summary.maxSeconds)}`) : '…'}</b></span>
         </div>
 
         <div className="rules rise" style={{ '--d': '280ms' }}>

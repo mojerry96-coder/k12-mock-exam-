@@ -25,9 +25,10 @@ export function createHttpAdapter(base = '/api', storage = globalThis.sessionSto
     hasSession: () => !!token,
     clear() { token = null; try { storage.removeItem(key); } catch { /* ignore */ } },
     health: () => request('/health').catch(() => ({ exam: false, recognition: false })),
+    exams: () => request('/mock/exams'),
     exam: (id) => request(`/mock/exams/${encodeURIComponent(id)}`),
-    async start(examId) {
-      const s = await request('/mock/start', { examId });
+    async start(examId, learner) {
+      const s = await request('/mock/start', { examId, learner });
       token = s.token;
       try { storage.setItem(key, token); } catch { /* ignore */ }
       return s;

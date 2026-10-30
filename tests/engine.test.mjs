@@ -2,7 +2,7 @@
 import { test, expect } from 'vitest';
 import { readFile } from 'node:fs/promises';
 import { createAttempt, expire, saveDraft, submit, publicSnapshot, results, numberValue, sanitizeDraft, workingText } from '../server/engine.mjs';
-import { buildExam, examSummary, EXAMS } from '../server/exams.mjs';
+import { buildExam, examSummary, examList, pickQuestions, EXAMS } from '../server/exams.mjs';
 
 const qs = [1, 2, 3].map((n) => ({ id: `q${n}`, subject: 'Mathematics', topic: 'Gradient', seconds: 10, type: 'number', answer: '2', explanation: 'key', marks: 1, source: { kind: 'original-placeholder' } }));
 const draft = (answer, extra = {}) => ({ answer, lines: [], strokes: [], conversions: [], ...extra });
@@ -101,9 +101,32 @@ test('the bank: 90 original placeholder questions, unique ids, valid keys, and t
   }
   const gradient = buildExam(questions, 'gradient-challenge');
   expect(gradient.questions.map((q) => q.id)).toEqual(['MAT-001', 'MAT-002']);
-  expect(examSummary(gradient)).toMatchObject({ count: 2, seconds: [120, 120], subjects: ['Mathematics'] });
-  expect(buildExam(questions, 'three-subject').questions).toHaveLength(9);
+  expect(examSummary(questions, 'gradient-challenge')).toMatchObject({ count: 2, minSeconds: 120, maxSeconds: 120, subjects: ['Mathematics'] });
   expect(buildExam(questions, 'gradient-challenge', { multiplier: 1.5 }).questions[0].seconds).toBe(180);
   expect(buildExam(questions, 'nope')).toBeNull();
+  expect(buildExam(questions, 'toString')).toBeNull();
   expect(Object.keys(EXAMS)).toContain('gradient-challenge');
+});
+
+test('subject exams draw at random from their subject; mixed draws across all three', async () => {
+  const { questions } = JSON.parse(await readFile(new URL('../data/question-bank.json', import.meta.url)));
+  for (const [id, subject] of [['mathematics', 'Mathematics'], ['english', 'English'], ['biology', 'Biology']]) {
+    const exam = buildExam(questions, id);
+    expect(exam.questions).toHaveLength(2);
+    expect(exam.questions.every((q) => q.subject === subject)).toBe(true);
+    expect(examSummary(questions, id)).toMatchObject({ count: 2, available: 30, subjects: [subject] });
+  }
+  const sets = new Set(Array.from({ length: 20 }, () => buildExam(questions, 'mathematics').questions.map((q) => q.id).join()));
+  expect(sets.size).toBeGreaterThan(10); // not the same pair every time
+  const mixed = new Set(Array.from({ length: 30 }, () => buildExam(questions, 'mixed').questions.map((q) => q.subject)).flat());
+  expect([...mixed].sort()).toEqual(['Biology', 'English', 'Mathematics']);
+  expect(examSummary(questions, 'mixed')).toMatchObject({ minSeconds: 75, maxSeconds: 120, available: 90 });
+  expect(examList(questions).map((e) => e.id)).toEqual(['mathematics', 'english', 'biology', 'mixed']);
+});
+
+test('unseen questions come first; when a subject runs out the longest-ago ones return', () => {
+  const pool = ['a', 'b', 'c', 'd'].map((id) => ({ id }));
+  expect(pickQuestions(pool, 2, { seen: ['a', 'b'] }).map((q) => q.id).sort()).toEqual(['c', 'd']);
+  expect(pickQuestions(pool, 2, { seen: ['c', 'a', 'b'] }).map((q) => q.id)).toEqual(['d', 'c']);
+  expect(pickQuestions(pool, 9, { seen: [] })).toHaveLength(4);
 });

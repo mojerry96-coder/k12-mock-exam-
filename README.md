@@ -61,20 +61,26 @@ preparation → one timed question at a time (keyboard or pen) → completion.
 ```bash
 npm install
 npm run dev        # http://localhost:5180 (API included)
-npm test           # engine, HTTP, session, editor and recogniser tests (57)
+npm test           # engine, HTTP, session, editor and recogniser tests (60)
 npm run build && npm start   # production server on :8081
 ```
 
-`?exam=three-subject` opens the 9-question Mathematics / English / Biology mock (multiple choice and
-passages); the default is the two-question Gradient challenge from the references.
+**Questions come from the 90-question bank** (30 Mathematics, 30 English, 30 Biology). On preparation,
+**Change subject** opens a picker: Mathematics, English, Biology or Mixed. Each attempt draws 2 questions
+at random from that subject (`QUESTIONS_PER_ATTEMPT` on the server changes the number), and the server
+remembers which questions this device has had (an anonymous key in `localStorage`, or the host's
+`learnerId`), so nothing repeats until the whole subject has been seen; then the longest-ago ones come
+back first. Retake draws new questions. A running attempt keeps its subject until it ends.
+`?exam=english` (or `mathematics`, `biology`, `mixed`) opens a subject directly;
+`?exam=gradient-challenge` is the fixed two-question exam from the design references.
 
 ## Layout
 
 | Path | What it is |
 |---|---|
 | `server/engine.mjs` | Deadlines, expiry, locking, revisions, draft sanitising, public snapshots, marking |
-| `server/exams.mjs` | Server-side exam definitions (questions, order, timing, accommodation multiplier) |
-| `server/store.mjs` | SQLite attempt store (`server/runtime/`, token hashes only) |
+| `server/exams.mjs` | Server-side exam definitions: subject exams with random, no-repeat selection; timing; accommodation multiplier |
+| `server/store.mjs` | SQLite attempt store and per-learner seen questions (`server/runtime/`, hashes only) |
 | `server/api.mjs` | `/api/mock/*`, `/api/recognize` (Mathpix adapter), `/api/health`; shared by dev and prod |
 | `server/index.mjs` | Production server: `dist/` only, byte ranges for video, 404 for anything else |
 | `src/main.jsx` | `mountMockExam(el, options)` into a shadow root; standalone page |
@@ -97,6 +103,7 @@ const exam = mountMockExam(el, {
   assets: '/assets',
   host: {
     settings: { dark: false },
+    learnerId: 'learner-123',                                 // questions don't repeat for this learner
     deviceCheck: async ({ mode }) => ({ ok: true }),         // trusted secure-browser check; failing blocks Start
     allowRetake: true,                                        // false hides Retake exam on completion
     recognizeInk: async (payload, { signal, questionId }) => ({ expression: 'm=4/2' }), // optional
@@ -110,7 +117,7 @@ Without a host the module still emits `mockexam:start`, `mockexam:retake`, `mock
 `window`. `onComplete` fires once per attempt after the server reports it complete; badges and XP are the
 host's to award, idempotently, from its own record.
 
-Server environment (`.env.local`): `MATHPIX_APP_ID` / `MATHPIX_APP_KEY` (handwriting), `MARKING=queued`,
+Server environment (`.env.local`): `MATHPIX_APP_ID` / `MATHPIX_APP_KEY` (handwriting), `MARKING=queued`, `QUESTIONS_PER_ATTEMPT` (default 2),
 `TIME_MULTIPLIER` (extra time, 1–3), `ATTEMPTS_DB`, `QUESTION_BANK`, `PORT`.
 
 ## Not connected / not verified

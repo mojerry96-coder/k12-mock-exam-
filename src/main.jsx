@@ -21,7 +21,7 @@ function installFonts(assets) {
  *   mountMockExam(el, { examId, assets, api, host, storage })
  * Returns { unmount() }. Unmount before mounting into the same element again.
  */
-export function mountMockExam(el, { examId = 'gradient-challenge', assets = '/assets', api, host, storage = window.sessionStorage } = {}) {
+export function mountMockExam(el, { examId = null, assets = '/assets', api, host, storage = window.sessionStorage } = {}) {
   installFonts(assets);
   const shadow = el.shadowRoot ?? el.attachShadow({ mode: 'open' });
   shadow.innerHTML = `<style>${css}</style><div class="mx-root"></div>`;
@@ -34,9 +34,7 @@ export function mountMockExam(el, { examId = 'gradient-challenge', assets = '/as
   return { unmount() { root.unmount(); shadow.replaceChildren(); } };
 }
 
-// Standalone page (index.html): ?exam=three-subject picks the longer demo exam.
+// Standalone page (index.html): ?exam=english (mathematics, english, biology, mixed,
+// gradient-challenge) opens that exam; otherwise the candidate picks a subject.
 const el = document.getElementById('mock-exam');
-if (el) {
-  const examId = new URLSearchParams(location.search).get('exam') || 'gradient-challenge';
-  mountMockExam(el, { examId });
-}
+if (el) mountMockExam(el, { examId: new URLSearchParams(location.search).get('exam') });

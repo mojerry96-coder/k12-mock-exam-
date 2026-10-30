@@ -55,7 +55,7 @@ export class ExamSession {
   }
 
   // ── lifecycle ──
-  async start(examId) { return this.open(() => this.api.start(examId), false); }
+  async start(examId, learner) { return this.open(() => this.api.start(examId, learner), false); }
   async resume() { return this.open(() => this.api.current(), true); }
   async open(load, resuming) {
     if (this.s.busy) return { ok: false };

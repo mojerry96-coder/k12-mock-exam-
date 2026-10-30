@@ -8,6 +8,7 @@ export function resolveHost(explicit) {
   return {
     connected: !!(explicit ?? globalThis.__GRADIENT_HOST__),
     settings: h.settings ?? null, // { dark }
+    learnerId: typeof h.learnerId === 'string' ? h.learnerId : null, // so questions aren't repeated across devices
     // async () => ({ ok, reason }) from a trusted secure-browser / attestation check
     deviceCheck: typeof h.deviceCheck === 'function' ? h.deviceCheck : null,
     // async (payload, { signal, questionId }) => ({ expression }); otherwise the server adapter is used

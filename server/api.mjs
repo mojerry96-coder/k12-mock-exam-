@@ -6,7 +6,7 @@
 // two overlapping requests can never act on the same stale copy.
 import { createStore } from './store.mjs';
 import { createRecognizer } from './recognize.mjs';
-import { loadBank, buildExam, examSummary, DEFAULT_EXAM } from './exams.mjs';
+import { loadBank, buildExam, examSummary, examList, DEFAULT_EXAM } from './exams.mjs';
 import { createAttempt, saveDraft, submit, recordEvent, publicSnapshot, results } from './engine.mjs';
 
 const MAX_BODY = 2 * 1024 * 1024;
@@ -41,6 +41,8 @@ export async function createApi(env = process.env, deps = {}) {
   const recognize = deps.recognize !== undefined ? deps.recognize : createRecognizer({ appId: env.MATHPIX_APP_ID, appKey: env.MATHPIX_APP_KEY });
   const multiplier = Math.max(1, Math.min(3, Number(env.TIME_MULTIPLIER) || 1));
   const marking = env.MARKING === 'queued' ? 'pending' : 'ready'; // queued = a human marks before results show
+  const count = Math.max(1, Math.min(30, Math.floor(Number(env.QUESTIONS_PER_ATTEMPT) || 2)));
+  const random = deps.random ?? Math.random;
   const now = deps.now ?? Date.now;
 
   const auth = (req) => {
@@ -58,16 +60,21 @@ export async function createApi(env = process.env, deps = {}) {
     try {
       if (path === '/api/health' && req.method === 'GET') return send(res, 200, { exam: true, recognition: !!recognize });
 
+      if (path === '/api/mock/exams' && req.method === 'GET') return send(res, 200, { exams: examList(bank, { multiplier, count }), defaultExam: DEFAULT_EXAM });
       const examMatch = path.match(/^\/api\/mock\/exams\/([\w-]+)$/);
       if (examMatch && req.method === 'GET') {
-        const exam = buildExam(bank, examMatch[1], { multiplier });
-        return exam ? send(res, 200, examSummary(exam)) : send(res, 404, { error: 'No such exam' });
+        const summary = examSummary(bank, examMatch[1], { multiplier, count });
+        return summary ? send(res, 200, summary) : send(res, 404, { error: 'No such exam' });
       }
 
       if (path === '/api/mock/start' && req.method === 'POST') {
         const body = await readJson(req);
-        const exam = buildExam(bank, typeof body.examId === 'string' ? body.examId : DEFAULT_EXAM, { multiplier });
+        // `learner` is an anonymous key the device keeps (the host's learner id once integrated);
+        // the server uses it only to avoid repeating questions.
+        const learner = typeof body.learner === 'string' ? body.learner.slice(0, 80) : '';
+        const exam = buildExam(bank, typeof body.examId === 'string' ? body.examId : DEFAULT_EXAM, { multiplier, count, seen: store.seen(learner), random });
         if (!exam) return send(res, 404, { error: 'No such exam' });
+        store.markSeen(learner, exam.questions.map((q) => q.id), now());
         const attempt = createAttempt(exam.questions, { now: now(), exam: exam.meta });
         const token = store.create(attempt);
         return send(res, 200, { token, ...snapshot(attempt) });

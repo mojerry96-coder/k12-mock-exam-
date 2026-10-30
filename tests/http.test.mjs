@@ -25,7 +25,7 @@ const call = async (path, { token, body } = {}) => {
 test('exam summary shows size and timing only, never content', async () => {
   const { status, body } = await call('/api/mock/exams/gradient-challenge');
   expect(status).toBe(200);
-  expect(body).toMatchObject({ label: 'Mathematics mock', title: 'Gradient challenge', count: 2, seconds: [120, 120] });
+  expect(body).toMatchObject({ label: 'Mathematics mock', title: 'Gradient challenge', count: 2, minSeconds: 120, maxSeconds: 120 });
   expect(JSON.stringify(body)).not.toMatch(/gradient of the line|answer/i);
   expect((await call('/api/mock/exams/unknown')).status).toBe(404);
 });
@@ -98,4 +98,25 @@ test('queued marking keeps results pending after completion', async () => {
   expect(res.status).toBe(202);
   expect(await res.json()).toEqual({ attemptId: done.id, status: 'pending' });
   s.close();
+});
+
+test('the picker lists the subjects, and a learner gets new questions every attempt until all 30 are used', async () => {
+  const list = await call('/api/mock/exams');
+  expect(list.body.exams.map((e) => e.id)).toEqual(['mathematics', 'english', 'biology', 'mixed']);
+  expect(list.body.defaultExam).toBe('mathematics');
+  const learner = 'device-123';
+  const ids = [];
+  for (let i = 0; i < 15; i++) {
+    const s = await call('/api/mock/start', { body: { examId: 'mathematics', learner } });
+    const qs = [s.body.question.id];
+    await call('/api/mock/submit', { token: s.body.token, body: { questionId: qs[0] } });
+    const second = await call('/api/mock/current', { token: s.body.token });
+    qs.push(second.body.question.id);
+    expect(s.body.total).toBe(2);
+    ids.push(...qs);
+  }
+  expect(new Set(ids).size).toBe(30); // 15 attempts × 2 = every maths question once, no repeats
+  expect(ids.every((id) => id.startsWith('MAT-'))).toBe(true);
+  const sixteenth = await call('/api/mock/start', { body: { examId: 'mathematics', learner } });
+  expect(ids.slice(0, 2)).toContain(sixteenth.body.question.id); // then the longest-ago ones come back
 });
